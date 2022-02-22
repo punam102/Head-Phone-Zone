@@ -2,6 +2,16 @@
     margin: 50px;
 }
 
+#login{
+    margin-right: 100px;
+    text-decoration: none;
+    color: grey;
+}
+
+p{
+    font-size: 20px;
+}
+
 *{
     font-family: sans-serif;
 }
@@ -9,29 +19,56 @@
 #a{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-}
-#email,#country{
-    width: 600px;
-    height: 30px;
-    border-radius: 5px;
-}
-#checkbox{
     margin-top: 20px;
 }
 
-#login{
-    margin-right: 100px;
+#shipping{
+    margin-top: 50px;
 }
 
-#address{
-    margin-top: 60px;
+#email,#country,#address,#phone{
+    margin-top: 10px;
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
 
+#name,#city{
+    margin-top: 10px;
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    gap: 3px;
 }
 
 .name{
-    width: 290px;
+    width: 50%;
     height: 30px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.city{
+    width: 33%;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+#submit{
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 220px;
+    border-color: solid blue;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 280px;
+    font-weight: bold;
+}
+
+label{
+    color: grey;
 }

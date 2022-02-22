@@ -1,0 +1,30 @@
+#container{
+    margin: 50px;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+#a{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+#email,#country{
+    width: 600px;
+    height: 30px;
+    border-radius: 5px;
+}
+#checkbox{
+    margin-top: 20px;
+}
+
+#login{
+    margin-right: 100px;
+}
+
+#address{
+    margin-top: 60px;
+
+}

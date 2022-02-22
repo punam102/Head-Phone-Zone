@@ -28,3 +28,10 @@
     margin-top: 60px;
 
 }
+
+.name{
+    width: 290px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

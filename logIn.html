@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Headphone Zone SingUp</title>
+    <title>Headphone Zone LOGIN</title>
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
@@ -75,7 +75,7 @@
         }
         .style3{
             height: 50px;
-            width: 46%;
+            width: 44%;
             border-radius: 50px;
             padding: 0px 10px;
            background-color:#3c07ff;
@@ -95,7 +95,7 @@
 </head>
 <body>
 <div id="container">
-    <h1 class="style">REGISTER</h1>
+    <h1 class="style">LOGIN</h1>
     <div id="main">
        <div style="background-color:#3b5998; border:2px solid #3b5998">
               <div>
@@ -127,60 +127,51 @@
         <div><h5>LOGIN WITH SOCIAL OR</h5></div>
         <div class="style1"></div>
     </div>
-    <p class="box2">Please fill in the fields below:</p>    
+    <p class="box2">Please enter your e-mail and Password:</p>    
   <div class="box3">
       <form id="form">
-          <input type="text" placeholder="First name" class="style2" id="name">
-          <p></p>
-          <input type="text" placeholder="Last name" class="style2" id="last">
-          <p></p>
           <input type="email" placeholder="E-mail" class="style2" id="email">    
           <p></p>
           <input type="password" placeholder="Password" class="style2" id="password">
           <p></p>
-          <p></p>
-          <input type="submit" value="CREATE ACCOUNT" class="style3">
+          <input type="submit" value="LOGIN" class="style3">
       </form>
-      <p class="style4">Already have an account? <a href="./logIn.html"style="color:#808080">Login</a></p>
+      <p class="style4">New customer? <a href="./signUp.html"style="color:#808080">Create an account</a></p>
   </div>
  </div>
 </body>
 </html>
 <script>
-    document.querySelector("#form").addEventListener("submit",formSubmit)
-var arr = JSON.parse(localStorage.getItem("verify")) || []
- 
+var verify2 = JSON.parse(localStorage.getItem("verify"))
+document.querySelector("#form").addEventListener("submit",FormDaTa)
 
-function formSubmit(event){
-    event.preventDefault()
-    var formObj = {
-        name:document.querySelector("#name").value,
-        last:document.querySelector("#last").value,
+function FormDaTa(event){
+    event.preventDefault();
+    var forObj = {
         email:document.querySelector("#email").value,
         password:document.querySelector("#password").value,
-        
-    }
-     var name = formObj.name;
-     var last = formObj.last;
-     var email = formObj.email;
-     var pass = formObj.password;
-    
-
-     if(name=="" || last=="" ||email=="" || pass==""){
-         alert("Fill all Fields")
-         return
-         
-     }else{
-         alert("Sign up Successfully")
-         window.location="./logIn.html"
-         arr.push(formObj)
-         localStorage.setItem("verify",JSON.stringify(arr));
-        return
-    
-    }
-    
+     }
      
-}
+
+    var email1 = forObj.email
+    var password1 = forObj.password
+     var index=verify2.findIndex(ele=>{
+       
+        return ele.email==forObj.email && ele.password==forObj.password
+     })
+    
+    if(email1=="" || password1==""){
+        alert("Fill all Fields")
+    }else if(index >=0){
+        alert("login success")
+        forObj.name=verify2[index].name
+        window.location="./mens.html"
+    }else{
+        alert("login fail")
+    }
+} 
+
+
 </script>
 
  

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{font-family: montserrat,sans-serif;}
+        /* navbar */
+        .navbar{height: 80px;
+               display: flex;
+               margin: auto;
+               justify-content: space-between;
+               margin-bottom: 100px;}
+
+        .left{display: flex;}
+        .right{display: flex;margin-right: 30px;}
+        p{padding: 20px;cursor: pointer;font-size: 14px;}
+        a{text-decoration: none;color: black;}
+        #head {height: 40px;width: 150px ;margin-top:20px; margin-left: 30px;margin-right: 150px;}
+
+        /* container */
+
+        #container{display: grid;
+                   grid-template-columns: repeat(3,1fr);
+                   width: 70%;
+                   row-gap:50px; column-gap: 30px;
+                   margin: auto;}
+
+        #container > div {line-height: 0px;text-align: center;}
+
+        .priceDiv {display: flex;align-items: baseline;justify-content: center;}
+
+        img {width:100%;}
+
+        s {color: #b92525;font-size: 14px;}
+
+        #container > div p {font-size: 14px;letter-spacing: 2px;font-weight:500;}
+
+        #container > div p + p{font-size: 12px;letter-spacing: 1px;font-weight:500;}
+
+        .priceDiv p {color: rgb(60,7,255);font-size: 14px;font-weight: 600;}
+
+        button {border: none;background-color: rgb(60,7,255);color:white;width:200px;height: 40px; margin: 10px 33px;border-radius: 50px;}
+
+        #sortContainer{flex-direction: column;border: 1px solid rgb(189, 182, 182);width: 300px;height: 400px;margin-right: 40px;padding-left: 30px;text-align: justify;padding-left: 30px;padding-right: 30px;}
+
+        #main {display: flex;}
+
+        select{border: none;font-size: 14px;font-weight:500;}
+
+        h1{text-align: center; margin-bottom: 100px;font-size: 50px;}
+
+        #search {width: 200px;height: 20px;margin-top: 30px;font-size: 14px;}
+
+
+        hr {margin-top: 25px;}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a href=""><img id="head" src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
+            <p><a href="Earphones.html">Earphones</a></p>
+            <p><a href="Headphones.html">Headphones</a></p>
+            <p><a href="Portable.html">Portable Amps</a></p>
+            <p><a href="Desktop.html">Desktop Amps</a></p>
+            <p><a href="HiresPlayer.html">Hi Res-Players</a></p>
+            <p><a href="Bundle.html">Bundles</a></p>
+        </div>
+        <div class="right">
+            <input onkeyup="search()" id="search" placeholder="Search">
+            <p><a href="">Account</a></p>
+            <p><a href="">Cart</a></p>  
+        </div>
+    </div>
+    <h1>AUDIOPHILE IEMS</h1>
+    <div id="main">
+        <div id="sortContainer">
+            <h3>Filters</h3>
+            <select onchange="sortItems()" id="sorter">
+                <option value="">Price</option>
+                <option value="H2L">High To Low</option>
+                <option value="L2H">Low To High</option>
+            </select>
+            <hr>
+            <select onchange="sortItems()" id="sorter">
+                <option value="">Brand</option>
+                <option value="">HIFIMAN</option>
+                <option value="">BEYERDYNAMIC-DT</option>
+                <option value="">MEZE</option>
+                <option value="">AUDIO-TECHNICA ZEN</option>
+                <option value="">HIFIMAN</option>
+            </select>
+            <hr>
+            <select onchange="sortItems()" id="sorter">
+                <option value="">Availability</option>
+                <option value="">In Stock</option>
+                <option value="">Out Of Stock</option>
+            </select>
+            <hr>
+        </div>
+        <div id=container>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var earphones = [{image:"https://cdn.shopify.com/s/files/1/0153/8863/products/e3a79da181084931a081e08bdc1a971a_d1c7fa15-f9e1-470e-9fd1-64d86df31cff_800x.jpg?v=1623654199",
+                      name:"KZ ZST X",
+                      tag:"In-Ears With 1 Dynamic Driver",
+                      priceSymbol:"Form ₹",
+                      price:1399,
+                      strike:1999,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-KZ-ZSN-Pro-X-Black-03_500x.jpg?v=1623407931",
+                      name:"KZ ZSN PRO",
+                      tag:"Tribrid Driver In-Ears",
+                      priceSymbol:"Form ₹",
+                      price:1599,
+                      strike:2000,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-BLON-BL-03-Silver-1160-1160-6_500x.jpg?v=1593432193",
+                      name:"FINAL",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:1299,
+                      strike:1599,},
+
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Shanling-Me100-12_500x.jpg?v=1590836013",
+                      name:"TRIPOWIN",
+                      tag:"10mm Graphene Driver in-Ears",
+                      priceSymbol:"Form ₹",
+                      price:4940,
+                      strike:5999,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-CCA-CRA-Black-03_500x.jpg?v=1640326188",
+                      name:"CCA-C10 PRO",
+                      tag:"In-Ears With 1DD + 4BA Hybrid Driver",
+                      priceSymbol:"Form ₹",
+                      price:1600,
+                      strike:1899,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Moondrop-Starfield-08_500x.jpg?v=1615979137",
+                      name:"CCA-CRA",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:3456,
+                      strike:4000,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Moondrop-Spaceship-02_500x.jpg?v=1615961066",
+                      name:"IBASS-ITO 1X",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:2399,
+                      strike:2599,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-final-Audio-E2000-Black-New_500x.jpg?v=1632220373",
+                      name:"1 CUSTOM",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:1299,
+                      strike:1599,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Final-Audio-E3000-08_500x.jpg?v=1632399354",
+                      name:"FINAL-E500",
+                      tag:"Wired In-Ears For Gaming & VR",
+                      priceSymbol:"Form ₹",
+                      price:2999,
+                      strike:3299,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Meze-12-Classics-V2-02_500x.jpg?v=1612869168",
+                      name:"FINAL-E250",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:2300,
+                      strike:2500,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-RE800-1160-1160-011_500x.jpg?v=1643803585",
+                      name:"CCA-CRA",
+                      tag:"Single Dynamic Driver IEM",
+                      priceSymbol:"Form ₹",
+                      price:1599,
+                      strike:1799,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-iBasso-IT01X-Black-04_500x.jpg?v=1634645565",
+                      name:"FINAL-F450",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:1700,
+                      strike:1900,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/397b9537bf78aea1a4a4acc4496a47fe_500x.jpg?v=1641184507",
+                      name:"ZXT-350",
+                      tag:"Single Dynamic Driver IEM",
+                      priceSymbol:"Form ₹",
+                      price:1999,
+                      strike:2199,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Campfire-Audio-Honeydew-02_500x.jpg?v=1624099609",
+                      name:"FINAL-F300",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:4000,
+                      strike:4100,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/soundmagic-e11c-headphone-zone-12815274508351_300x.jpg?v=1580359976",
+                      name:"FINAL-E650",
+                      tag:"Wired In-Ears For Gaming & VR",
+                      priceSymbol:"Form ₹",
+                      price:1499,
+                      strike:1699,},
+
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-KZ-AS12-Green-1160-1160-01_500x.jpg?v=1637573191",
+                      name:"KZ ASR-60",
+                      tag:"Wired In-Ears For Gaming & VR",
+                      priceSymbol:"Form ₹",
+                      price:1699,
+                      strike:1799,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Shanling-Music1-Black-02_500x.jpg?v=1632903504",
+                      name:"FINAL-E40",
+                      tag:"Wired In-Ears For Gaming & VR",
+                      priceSymbol:"Form ₹",
+                      price:1249,
+                      strike:1399,},
+                      
+                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-FiiO-FH3-02_300x.jpg?v=1624598778",
+                      name:"FINAL-E300",
+                      tag:"Earphones For Spatial Audio",
+                      priceSymbol:"Form ₹",
+                      price:1299,
+                      strike:1699,},];
+
+
+localStorage.setItem("EarPhonesData", JSON.stringify("earphones"));
+
+var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+earphones.map(function(elem, index, array)
+{
+    var div = document.createElement("div");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", elem.image);
+
+    var name = document.createElement("p");
+    name.innerText = elem.name;
+
+    var tag = document.createElement("p");
+    tag.innerText = elem.tag;
+
+    var priceDiv = document.createElement("div");
+
+    var price = document.createElement("p");
+    price.innerText = elem.price;
+
+    var symbol = document.createElement("p");
+    symbol.innerText = elem.priceSymbol;
+
+    var strike = document.createElement("s");
+    strike.innerText = elem.strike;
+
+    // add to cart button
+
+    var cart = document.createElement("button");
+    cart.innerText = "Add To Cart";
+    cart.addEventListener("click", function()
+    {
+        addToCart(elem);
+    })
+
+    priceDiv.append(symbol, price, strike);
+    priceDiv.setAttribute("class","priceDiv");
+
+    div.append(img, name, tag, priceDiv, cart);
+    document.querySelector("#container").append(div);
+})
+
+function addToCart(elem)
+{
+    console.log(elem);
+    elem.quant = 1;
+    cartArr.push(elem);
+    console.log(cartArr)
+    localStorage.setItem("cartItems", JSON.stringify(cartArr));
+}
+displayData(earphones)
+
+function sortItems()
+{
+    var sorting = document.querySelector("#sorter").value;
+
+    if(sorting == "H2L")
+    {
+        earphones.sort(function(a, b){
+            return b.price -a.price;
+        })
+        displayData(earphones);
+        
+    }
+    else(sorting === "L2H")
+    {
+        earphones.sort(function(a, b)
+        {
+            return a.price - b.price;
+        })
+        displayData(earphones);
+    }
+}
+
+function search(){
+  var searchText = document.getElementById("search").value;
+  var filterData = earphones.filter(function(elem){
+    return elem.name.trim().toLowerCase().includes(searchText.toLowerCase());
+  })
+  displayData(filterData);
+}
+
+</script>

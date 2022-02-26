@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart Items</title>
+    <link rel="stylesheet" href="./cartStyles.css" />
+       
+</head>
+<body>
+ 
+    <div id="nav">
+        <h2>CART</h2>
+
+    </div>
+
+    <div id="parent">
+    <div class="left">
+    
+      
+    </div>
+    <div class="right">
+        <div class="inner">
+            <div><h2>Total</h2></div>
+          <div class="total">0</div>
+
+        </div>
+      <button><a href="">
+      </a> CHECKOUT</button>
+       <div class="para">
+           <p>Login to earn 2098 Club Audiophile points.
+            No account? Sign up now.</p>
+       </div>
+    </div>
+    </div>
+
+
+    <div class="mini">
+        <input type="checkbox"> 
+        <label> For ₹ 50 please wrap the products in this order.</label>
+       <p> Gift message (free and optional):</p>
+       <input type=""/>
+    </div>
+
+    <div class="nav2">
+        <h4>SHOW THE WORLD YOU'RE AN AUDIOPHILE</h4>
+        <h2>SHOP HEADPHONE ZONE MERCHANDISE</h2>
+    </div>
+<div id="container">
+
+    <div class="child">
+       
+        <img src="https://cdn.shopify.com/s/files/1/0153/8863/products/the-audiophile-t-shirt-headphone-zone-4686953840703_300x.jpg?v=1642489733"/>  
+    <p>PROFESSED AUDIOPHILE T-SHIRT</p>
+    <h5>Custom Made Merchandise</h5>
+    <p>₹ 499</p>
+    
+    </div>
+    <div class="child">
+        <img src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Audiophile-Defined-T-Shirt-02_400x.jpg?v=1642490984"/>
+        <p>PROFESSED AUDIOPHILE T-SHIRT</p>
+        <h5>Custom Made Merchandise</h5>
+        <p>₹ 499</p>
+    </div>
+    <div class="child">
+        <img src="https://cdn.shopify.com/s/files/1/0153/8863/products/the-it-s-called-bass-t-shirt-headphone-zone-4681644671039_400x.jpg?v=1580336617"/>
+        <p>PROFESSED AUDIOPHILE T-SHIRT</p>
+        <h5>Custom Made Merchandise</h5> 
+        <p>₹ 499</p> 
+    
+    
+    </div>
+    <div class="child">
+        <img src="https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Insignia-T-Shirt-Black-5_700x.jpg?v=1642493599"/>
+        <p>PROFESSED AUDIOPHILE T-SHIRT</p>
+        <h5>Custom Made Merchandise</h5>
+        <p>₹ 499</p>
+    </div> 
+   
+</div>
+   
+</body>
+</html>
+<script>
+     var cartArr = JSON.parse(localStorage.getItem("cartItems"))||[] ;
+   console.log(cartArr)
+
+
+  
+    var cartArr = JSON.parse(localStorage.getItem("cartItems")) ;
+    console.log(cartArr)
+
+    function displayData(cartArr)
+    
+    {
+        document.querySelector(".left").innerHTML="";
+        cartArr.map(function(elem, index, array)
+        {
+          
+           var div = document.createElement("div");
+
+           var img = document.createElement("img");
+           img.setAttribute("src", elem.image);
+
+           var name = document.createElement("p");
+           name.innerText = elem.name;
+        
+
+           var priceDiv = document.createElement("div");
+
+           var price = document.createElement("p");
+           price.innerText = elem.price + " : " + elem.quant;
+
+           var symbol = document.createElement("p");
+           symbol.innerText = elem.priceSymbol;
+
+           var strike = document.createElement("p");
+           strike.innerText = elem.tag;
+
+
+           priceDiv.append(symbol,price, strike);
+           priceDiv.setAttribute("class","priceDiv");
+
+     
+           var btn = document.createElement("button");
+           btn.innerText = "QUANTITY+1";
+
+           btn.addEventListener("click", function()
+           {
+               increaseQuant(index);
+           })
+
+           var btn2 = document.createElement("button");
+           btn2.innerText = "REMOVE";
+
+           btn2.addEventListener("click", function()
+           {
+               decreaseQuant(index);
+           })
+
+           div.append(img, name, priceDiv, btn,btn2);
+           document.querySelector(".left").append(div);
+        });
+    }
+
+    function Total()
+    {
+        var cartTotal = cartArr.reduce(function(acc, elem,index)
+        {
+            return acc + (elem.price * elem.quant);
+        }, 0);
+        
+        document.querySelector(".total").innerText = cartTotal;
+    }
+
+    
+    displayData(cartArr)
+    Total();
+
+    function increaseQuant(index)
+    {
+        cartArr[index].quant++;
+        localStorage.setItem("cartItems", JSON.stringify(cartArr));
+        displayData(cartArr)
+        Total();
+    }
+    function decreaseQuant(index)
+    {
+        cartArr[index].quant--;
+        localStorage.setItem("cartItems", JSON.stringify(cartArr));
+        displayData(cartArr)
+        Total();
+    }
+</script>

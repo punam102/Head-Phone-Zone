@@ -1,0 +1,178 @@
+#container{
+    margin: 50px;
+}
+
+#login{
+    margin-right: 100px;
+    text-decoration: none;
+    color: grey;
+    margin-top: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+#a{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#shipping{
+    margin-top: 50px;
+}
+
+#email{
+    margin-top: 10px;
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#shipping>div{
+    width: 500px;
+}
+
+#country{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#address,#phone{
+    width: 98.3%;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.name{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#name,#city{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.city{
+    width: 33%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+
+#submit{
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 220px;
+    border-color: solid blue;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 280px;
+    font-weight: bold;
+}
+
+label{
+    color: grey;
+}
+
+/* medium screens */
+
+@media all and (min-width: 600px) and (max-width: 720px) {
+    #login{
+        margin-right: 0px;
+    }
+
+    #submit{
+        background-color: blue;
+        color: white;
+        height: 50px;
+        width: 100%;
+        border-color: solid blue;
+        border-radius: 5px;
+        margin-top: 30px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+
+  }
+
+  /* small screens */
+
+  @media all and (min-width: 50px) and (max-width: 599px) {
+    #login{
+        margin-right: 0px;
+    }
+
+    #email{
+        margin-top: 10px;
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    #shipping>div{
+        width: 100%;
+    }
+    
+    #country{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    #address,#phone{
+        width: 98.3%;
+        margin-top: 10px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    .name{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    #name,#city{
+        gap: 5px;
+        margin-top: 10px;
+        display: block;
+    }
+    
+    .city{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    
+    
+    #submit{
+        background-color: blue;
+        color: white;
+        height: 50px;
+        width: 100%;
+        border-color: solid blue;
+        border-radius: 5px;
+        margin-top: 30px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+
+
+
+  }
+
+

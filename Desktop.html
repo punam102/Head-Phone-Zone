@@ -1,79 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/e83fe8687f.js" crossorigin="anonymous"></script>
     <style>
-        *{font-family: montserrat,sans-serif;}
-        /* navbar */
-        .navbar{height: 80px;
-               display: flex;
-               margin: auto;
-               justify-content: space-between;
-               margin-bottom: 100px;}
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        .left{display: flex;}
-        .right{display: flex;margin-right: 30px;}
-        
-        p{padding: 20px;cursor: pointer;font-size: 14px;}
-        a{text-decoration: none;color: black;}
-        #head {height: 40px;width: 150px ;margin-top:20px; margin-left: 30px;margin-right: 150px;}
+        .navbar {
+            height: 80px;
+            width: 100%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            position: fixed;
+            z-index: 99;
+
+            background-color: #f9f9f9;
+            margin-top: -100px;
+
+
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        }
+
+
+        .left {
+            display: flex;
+
+            gap: 6px;
+        }
+
+        .right {
+            display: flex;
+            margin-right: 35px;
+
+            gap: 5px;
+        }
+
+        .head2 {
+            padding: 14px 0px 0px 15px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .head1 {
+            text-decoration: none;
+            color: #4e4e4e;
+
+        }
+
+        .head1:hover {
+            border-bottom: 2px solid #808080;
+        }
+
+        #head {
+            height: 40px;
+            width: 150px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 150px;
+            background-color: #f9f9f9;
+        }
+
+        #search {
+            width: 200px;
+            height: 26px;
+            margin-top: 25px;
+            font-size: 14px;
+            border: 1px solid rgb(224, 219, 219);
+        }
 
         /* container */
 
-        #container{display: grid;
-                   grid-template-columns: repeat(3,1fr);
-                   width: 70%;
-                   row-gap:50px; column-gap: 30px;
-                   margin: auto;}
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 70%;
+            row-gap: 50px;
+            column-gap: 30px;
+            margin: auto;
+        }
 
-        #container > div {line-height: 0px;text-align: center;}
+        #container>div {
+            line-height: 0px;
+            text-align: center;
+        }
 
-        .priceDiv {display: flex;align-items: baseline;justify-content: center;}
+        .priceDiv {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
 
-        img {width:100%;}
+        img {
+            width: 100%;
+        }
 
-        s {color: #b92525;font-size: 14px;}
+        s {
+            color: #b92525;
+            font-size: 14px;
+        }
 
-        #container > div p {font-size: 14px;letter-spacing: 2px;font-weight:500;}
+        #container>div p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
 
-        #container > div p + p{font-size: 12px;letter-spacing: 1px;font-weight:500;}
+        #container>div p+p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
 
-        .priceDiv p {color: rgb(60,7,255);font-size: 14px;font-weight: 600;}
+        .priceDiv p {
+            color: rgb(60, 7, 255);
+            font-size: 14px;
+            font-weight: 600;
+        }
 
-        button {border: none;background-color: rgb(60,7,255);color:white;width:200px;height: 40px; margin: 10px 33px;border-radius: 50px;}
+        button {
+            border: none;
+            background-color: rgb(60, 7, 255);
+            color: white;
+            width: 200px;
+            height: 40px;
+            margin: 10px 33px;
+            border-radius: 50px;
+        }
 
-        #sortContainer{flex-direction: column;border: 1px solid rgb(189, 182, 182);width: 300px;height: 400px;margin-right: 40px;padding-left: 30px;text-align: justify;padding-left: 30px;padding-right: 30px;}
+        #sortContainer {
+            flex-direction: column;
+            border: 1px solid rgb(189, 182, 182);
+            width: 300px;
+            height: 400px;
+            margin-right: 40px;
+            padding-left: 30px;
+            text-align: justify;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
-        #main {display: flex;}
+        #main {
+            display: flex;
+        }
 
-        select{border: none;font-size: 14px;font-weight:500;}
+        select {
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
-        h1{text-align: center; margin-bottom: 100px;font-size: 50px;}
+        h1 {
+            text-align: center;
+            margin-bottom: 100px;
+            font-size: 50px;
+            margin-top: 100px;
+        }
 
-        #search {width: 200px;height: 20px;margin-top: 30px;font-size: 14px;}
+        #search {
+            width: 200px;
+            height: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
 
-        hr {margin-top: 25px;}
+        hr {
+            margin-top: 25px;
+        }
 
+        #container2{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    background-color: #F9F9F9;
+     
+     
+}
+
+#container2>div{
+    width: 19%;
+    height: 100%;
+}
+
+.box16{
+    font-weight: bold;
+}
+
+.box16:nth-child(2) {
+    margin-top: 25px;
+}
+
+.box17>p:nth-child(2){
+    line-height: 30px;
+}
+
+.box18>p{
+    margin-left: 30px;
+       
+}
+
+.box18>div{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 40px;
+    border: 1px solid grey;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.box18>div>div{
+    width: 25%;
+    border: 1px solid grey;
+}
+i{
+    padding: 13px 18px;
+}
+
+.box18>div>div:hover{
+    transform: scale(1.05);
+    background-color: grey;
+    color: white;
+     
+}
+
+.box19{
+    background-color: #F9F9F9;
+}
+
+.box20{
+         width: 45%;
+         height: 60px;
+         margin-left: 400px;
+         margin-top: 80px;
+        
+        }
+ 
     </style>
 </head>
+
 <body>
     <div class="navbar">
         <div class="left">
-            <a href=""><img id="head" src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
-            <p><a href="Earphones.html">Earphones</a></p>
-            <p><a href="Headphones.html">Headphones</a></p>
-            <p><a href="Portable.html">Portable Amps</a></p>
-            <p><a href="Desktop.html">Desktop Amps</a></p>
-            <p><a href="HiresPlayer.html">Hi Res-Players</a></p>
-            <p><a href="Bundle.html">Bundles</a></p>
+            <a href="index.html"><img id="head"
+                    src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
+            <p class="head2"><a class="head1" href="Earphones.html">Earphones</a></p>
+            <p class="head2"><a class="head1" href="Headphones.html">Headphones</a></p>
+            <p class="head2"><a class="head1" href="Portable.html">Portable Amps</a></p>
+            <p class="head2"><a class="head1" href="Desktop.html">Desktop Amps</a></p>
+            <p class="head2"><a class="head1" href="HiresPlayer.html">Hi Res-Players</a></p>
+            <p class="head2"><a class="head1" href="Bundle.html">Bundles</a></p>
         </div>
         <div class="right">
             <input onkeyup="search()" id="search" placeholder="Search">
-            <p><a href="index.html">Account</a></p>
-            <p><a href="cart.html">Cart</a></p>  
+            <p class="head2"><a class="head1" href="./logIn.html">Log In</a></p>
+            <p class="head2"><a class="head1" href="">Cart</a></p>
         </div>
     </div>
     <h1>DESKTOP AMPS & DACS</h1>
@@ -105,10 +295,58 @@
         <div id=container>
         </div>
     </div>
+    <div id="container2">
+        <div>
+            <p class="box16">LET US HELP</p>
+            <p>Help Center</p>
+            <p>Track My Order</p>
+            <p>Cancel My Order</p>
+            <p>Return My Order</p>
+            <p>Request a Product</p>
+            <p>Report a Bug</p>
+            <p>Contact Us</p>
+        </div>
+
+        <div>
+            <p class="box16">OUR POLICIES</p>
+            <p>Shipping & Delivery</p>
+            <p>Returns, Refunds & Cancellations</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div>
+            <p class="box16">COMMUNITY</p>
+            <p>Headphone Zone Merchandise</p>
+            <p>Trade-Up Program</p>
+            <p>The Insider</p>
+        </div>
+
+        <div class="box17">
+            <p class="box16">BEWARE OF FAKES</p>
+            <p>Don't get fooled. Look out for smuggled & refurbished headphones while shopping online. Headphone Zone is a professionally run business & deals only in 100% genuine headphones</p>
+            <a href="">Learn More</a>
+        </div>
+
+        <div class="box18">
+            <p class="box16">FOLLOW US</p>
+            <div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+                <div><i class="fa-brands fa-twitter"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="box19">
+        <img class="box20" src="./Capture.PNG" alt="">
+    </div>
 </body>
+
 </html>
 <script>
-<<<<<<< HEAD
 <<<<<<< HEAD
     var desktop = [{
         image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-E30-01_500x.jpg?v=1596625475",
@@ -123,129 +361,82 @@
                     name:"TOPPING-A30 PRO",
                     tag:"Desktop Headphone Amp & DAC",
                     priceSymbol:" ₹",
-=======
-    var desktop = [{image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-E30-01_500x.jpg?v=1596625475",
-                    name:"TOPPING-A30 PRO",
-                    tag:"Desktop Headphone Amp & DAC",
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:12999,
                     strike:15999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/iFi-Audio-Zen-can-05_500x.jpg?v=1597035161",
                     name:"AUNE AUDIO-X1S PRO",
                     tag:"Desktop Digital to Analog Converter (DAC)",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:39999,
                     strike:45999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-iFi-Audio-Zen-DAC-V2-2_500x.jpg?v=1626759314",
                     name:"FIIO-K5 PRO",
                     tag:"Desktop Digital to Analog Converter (DAC)",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:12999,
                     strike:15999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/topping-L30-Black-01_500x.jpg?v=1606724717",
                     name:"EARMAN DONALD DAC",
                     tag:"Desktop Headphone Amplifier",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:17999,
                     strike:18999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-D50s-06_500x.jpg?v=1596697897",
                     name:"TOPPING-A50S",
                     tag:"Desktop DAC & Amp",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:12599,
                     strike:14999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-A90-01_500x.jpg?v=1611990200",
                     name:"TOPPING D30 PRO",
                     tag:"Desktop DAC & Amp",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:12999,
                     strike:13999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Aune-Audio-X7s-2021-02_500x.jpg?v=1616407921",
                     name:"CHORD-MOJO 2",
                     tag:"Desktop DAC & Amp",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:15999,
                     strike:15999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-FiiO-D03K-2_500x.jpg?v=1621494468",
                     name:"AUNE AUDIO-X8",
                     tag:"Desktop Headphone Amplifier",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:11999,
                     strike:15999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/EarMen-Donald-DAC-New-2_300x.jpg?v=1595424126",
                     name:"TOPPING-DX3 PRO+",
                     tag:"Desktop Digital To Analog Converter (DAC)",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:18999,
                     strike:19999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-K5-Pro-1_300x.jpg?v=1624598956",
                     name:"S.M.S.L SU-9",
                     tag:"Desktop DAC & Amp",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:12999,
                     strike:15999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Aune-Audio-X1s-1160-1160-1_300x.jpg?v=1597038298",
                     name:"XDUOO MT-604",
                     tag:"Desktop Digital To Analog Converter (DAC)",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
-=======
-                    priceSymbol:"Form ₹",
->>>>>>> parent of 8db7fcc (navbar)
                     price:15999,
                     strike:16999,},
                     
                     {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Topping-A30Pro-gallery-5_300x.jpg?v=1620033119",
                     name:"TOPPING-D10",
                     tag:"Desktop Headphone Amplifier",
-<<<<<<< HEAD
                     priceSymbol:" ₹",
                     price:11999,
                     strike:15999,},];
@@ -313,86 +504,96 @@
         price: 11999,
         strike: 15999,
     },
-=======
-                    priceSymbol:"Form ₹",
-                    price:11999,
-                    strike:15999,},];
->>>>>>> parent of 8db7fcc (navbar)
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/EarMen-Donald-DAC-New-2_300x.jpg?v=1595424126",
+        name: "TOPPING-DX3 PRO+",
+        tag: "Desktop Digital To Analog Converter (DAC)",
+        priceSymbol: "Form ₹",
+        price: 18999,
+        strike: 19999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-K5-Pro-1_300x.jpg?v=1624598956",
+        name: "S.M.S.L SU-9",
+        tag: "Desktop DAC & Amp",
+        priceSymbol: "Form ₹",
+        price: 12999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Aune-Audio-X1s-1160-1160-1_300x.jpg?v=1597038298",
+        name: "XDUOO MT-604",
+        tag: "Desktop Digital To Analog Converter (DAC)",
+        priceSymbol: "Form ₹",
+        price: 15999,
+        strike: 16999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Topping-A30Pro-gallery-5_300x.jpg?v=1620033119",
+        name: "TOPPING-D10",
+        tag: "Desktop Headphone Amplifier",
+        priceSymbol: "Form ₹",
+        price: 11999,
+        strike: 15999,
+    },];
 
     localStorage.setItem("desktopData", JSON.stringify("desktop"));
 
-var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-function displayData(desktop){
+    function displayData(desktop) {
 
-    document.querySelector("#container").innerHTML = "";
-    desktop.map(function(elem, index, array)
-{
-    var div = document.createElement("div");
+        document.querySelector("#container").innerHTML = "";
+        desktop.map(function (elem, index, array) {
+            var div = document.createElement("div");
 
-    var img = document.createElement("img");
-    img.setAttribute("src", elem.image);
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image);
 
-    var name = document.createElement("p");
-    name.innerText = elem.name;
+            var name = document.createElement("p");
+            name.innerText = elem.name;
 
-    var tag = document.createElement("p");
-    tag.innerText = elem.tag;
+            var tag = document.createElement("p");
+            tag.innerText = elem.tag;
 
-    var priceDiv = document.createElement("div");
+            var priceDiv = document.createElement("div");
 
-    var price = document.createElement("p");
-    price.innerText = elem.price;
+            var price = document.createElement("p");
+            price.innerText = elem.price;
 
-    var symbol = document.createElement("p");
-    symbol.innerText = elem.priceSymbol;
+            var symbol = document.createElement("p");
+            symbol.innerText = elem.priceSymbol;
 
-    var strike = document.createElement("s");
-    strike.innerText = elem.strike;
+            var strike = document.createElement("s");
+            strike.innerText = elem.strike;
 
-    // add to cart button
+            // add to cart button
 
-    var cart = document.createElement("button");
-    cart.innerText = "Add To Cart";
-    cart.addEventListener("click", function()
-    {
-        addToCart(elem);
-    })
+            var cart = document.createElement("button");
+            cart.innerText = "Add To Cart";
+            cart.addEventListener("click", function () {
+                addToCart(elem);
+            })
 
-    priceDiv.append(symbol, price, strike);
-    priceDiv.setAttribute("class","priceDiv");
+            priceDiv.append(symbol, price, strike);
+            priceDiv.setAttribute("class", "priceDiv");
 
-    div.append(img, name, tag, priceDiv, cart);
-    document.querySelector("#container").append(div);
-})
-
-function addToCart(elem)
-{
-    console.log(elem);
-    elem.quant = 1;
-    cartArr.push(elem);
-    console.log(cartArr)
-    localStorage.setItem("cartItems", JSON.stringify(cartArr));
-}
-}
-
-
-
-displayData(desktop)
-
-function sortItems()
-{
-    var sorting = document.querySelector("#sorter").value;
-
-    if(sorting == "H2L")
-    {
-        desktop.sort(function(a, b){
-            return b.price -a.price;
+            div.append(img, name, tag, priceDiv, cart);
+            document.querySelector("#container").append(div);
         })
-        displayData(desktop);
-        
+
+        function addToCart(elem) {
+            console.log(elem);
+            elem.quant = 1;
+            cartArr.push(elem);
+            console.log(cartArr)
+            localStorage.setItem("cartItems", JSON.stringify(cartArr));
+        }
     }
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -415,24 +616,20 @@ function sortItems()
     {
         desktop.sort(function(a, b)
 >>>>>>> main
-=======
-    else(sorting === "L2H")
-    {
-        desktop.sort(function(a, b)
->>>>>>> parent of 8db7fcc (navbar)
         {
-            return a.price - b.price;
-        })
-        displayData(desktop);
+            desktop.sort(function (a, b) {
+                return a.price - b.price;
+            })
+            displayData(desktop);
+        }
     }
-}
 
-function search(){
-  var searchText = document.getElementById("search").value;
-  var filterData = desktop.filter(function(elem){
-    return elem.name.trim().toLowerCase().includes(searchText.toLowerCase());
-  })
-  displayData(filterData);
-}
+    function search() {
+        var searchText = document.getElementById("search").value;
+        var filterData = desktop.filter(function (elem) {
+            return elem.name.trim().toLowerCase().includes(searchText.toLowerCase());
+        })
+        displayData(filterData);
+    }
 
 </script>

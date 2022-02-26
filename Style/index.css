@@ -45,7 +45,9 @@
     color:#4e4e4e;
      
 }
-
+.head1:hover{
+  border-bottom: 2px solid #808080;
+}
 #head {
     height: 40px;
     width: 150px;

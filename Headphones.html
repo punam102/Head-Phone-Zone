@@ -1,68 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{font-family: montserrat,sans-serif;}
-        /* navbar */
-        .navbar{height: 80px;
-               display: flex;
-               margin: auto;
-               justify-content: space-between;
-               margin-bottom: 100px;}
+        * {
+            font-family: montserrat, sans-serif;
+        }
 
-        .left{display: flex;}
-        .right{display: flex;margin-right: 30px;}
-        p{padding: 20px;cursor: pointer;font-size: 14px;}
-        a{text-decoration: none;color: black;}
-        #head {height: 40px;width: 150px ;margin-top:20px; margin-left: 30px;margin-right: 150px;}
+        /* navbar */
+        .navbar {
+            height: 80px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+
+        .left {
+            display: flex;
+        }
+
+        .right {
+            display: flex;
+            margin-right: 30px;
+        }
+
+        p {
+            padding: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #head {
+            height: 40px;
+            width: 150px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-right: 150px;
+        }
 
         /* container */
 
-        #container{display: grid;
-                   grid-template-columns: repeat(3,1fr);
-                   width: 70%;
-                   row-gap:50px; column-gap: 30px;
-                   margin: auto;}
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 70%;
+            row-gap: 50px;
+            column-gap: 30px;
+            margin: auto;
+        }
 
-        #container > div {line-height: 0px;text-align: center;}
+        #container>div {
+            line-height: 0px;
+            text-align: center;
+        }
 
-        .priceDiv {display: flex;align-items: baseline;justify-content: center;}
+        .priceDiv {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
 
-        img {width:100%;}
+        img {
+            width: 100%;
+        }
 
-        s {color: #b92525;font-size: 14px;}
+        s {
+            color: #b92525;
+            font-size: 14px;
+        }
 
-        #container > div p {font-size: 14px;letter-spacing: 2px;font-weight:500;}
+        #container>div p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
 
-        #container > div p + p{font-size: 12px;letter-spacing: 1px;font-weight:500;}
+        #container>div p+p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
 
-        .priceDiv p {color: rgb(60,7,255);font-size: 14px;font-weight: 600;}
+        .priceDiv p {
+            color: rgb(60, 7, 255);
+            font-size: 14px;
+            font-weight: 600;
+        }
 
-        button {border: none;background-color: rgb(60,7,255);color:white;width:200px;height: 40px; margin: 10px 33px;border-radius: 50px;}
+        button {
+            border: none;
+            background-color: rgb(60, 7, 255);
+            color: white;
+            width: 200px;
+            height: 40px;
+            margin: 10px 33px;
+            border-radius: 50px;
+        }
 
-        #sortContainer{flex-direction: column;border: 1px solid rgb(189, 182, 182);width: 300px;height: 400px;margin-right: 40px;padding-left: 30px;text-align: justify;padding-left: 30px;padding-right: 30px;}
+        #sortContainer {
+            flex-direction: column;
+            border: 1px solid rgb(189, 182, 182);
+            width: 300px;
+            height: 400px;
+            margin-right: 40px;
+            padding-left: 30px;
+            text-align: justify;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
-        #main {display: flex;}
+        #main {
+            display: flex;
+        }
 
-        select{border: none;font-size: 14px;font-weight:500;}
+        select {
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
-        h1{text-align: center; margin-bottom: 100px;font-size: 50px;}
+        h1 {
+            text-align: center;
+            margin-bottom: 100px;
+            font-size: 50px;
+        }
 
-        #search {width: 200px;height: 20px;margin-top: 30px;font-size: 14px;}
+        #search {
+            width: 200px;
+            height: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
 
 
-        hr {margin-top: 25px;}
-
+        hr {
+            margin-top: 25px;
+        }
+        .image:hover{
+            transform: scale(1.05);
+        }
     </style>
 </head>
+
 <body>
     <div class="navbar">
         <div class="left">
-            <a href=""><img id="head" src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
+            <a href=""><img id="head"
+                    src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
             <p><a href="Earphones.html">Earphones</a></p>
             <p><a href="Headphones.html">Headphones</a></p>
             <p><a href="Portable.html">Portable Amps</a></p>
@@ -72,8 +166,8 @@
         </div>
         <div class="right">
             <input onkeyup="search()" id="search" placeholder="Search">
-            <p><a href="index.html">Account</a></p>
-            <p><a href="cart.html">Cart</a></p>  
+            <p><a href="index.html">Log In</a></p>
+            <p><a href="cart.html">Cart</a></p>
         </div>
     </div>
     <h1>AUDIOPHILE HEADPHONES</h1>
@@ -106,204 +200,230 @@
         </div>
     </div>
 </body>
+
 </html>
 <script>
 
-    var headphones = [{image:"https://cdn.shopify.com/s/files/1/0153/8863/products/beyerdynamic-dt-770-pro-headphone-zone-13980464185407_500x.jpg?v=1579662488",
-                      name:"V-MODA M-200",
-                      tag:"Wired DJ Headphones",
-                      priceSymbol:"Form ₹",
-                      price:13999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-dt-990-pro-1160-1160-5_500x.jpg?v=1598946254",
-                      name:"SHURE-SH400",
-                      tag:"Closed-back Studio Headphones",
-                      priceSymbol:"Form ₹",
-                      price:17999,
-                      strike:19999,},
+    var headphones = [{
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/beyerdynamic-dt-770-pro-headphone-zone-13980464185407_500x.jpg?v=1579662488",
+        name: "V-MODA M-200",
+        tag: "Wired DJ Headphones",
+        priceSymbol: "Form ₹",
+        price: 13999,
+        strike: 15999,
+    },
 
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-DT-880-Pro-1160-1160-1_500x.jpg?v=1599208178",
-                      name:"EVERYDYNAMIC-DT 880",
-                      tag:"Open-Back studio",
-                      priceSymbol:"Form ₹",
-                      price:18499,
-                      strike:24999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-569-headphone-zone-29093551111_500x.jpg?v=1579780219",
-                      name:"EIKON-H200",
-                      tag:"Wired DJ Headphones",
-                      priceSymbol:"Form ₹",
-                      price:10999,
-                      strike:15999,},
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-dt-990-pro-1160-1160-5_500x.jpg?v=1598946254",
+        name: "SHURE-SH400",
+        tag: "Closed-back Studio Headphones",
+        priceSymbol: "Form ₹",
+        price: 17999,
+        strike: 19999,
+    },
 
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-AIAIAI-Studio-XE-02_300x.jpg?v=1636776924",
-                      name:"AIAIAI-TMA 2",
-                      tag:"Wired DJ Headphones",
-                      priceSymbol:"Form ₹",
-                      price:16549,
-                      strike:19999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_500x.jpg?v=1591944478",
-                      name:"EIKON-H250",
-                      tag:"Professional On-Ear Headphones",
-                      priceSymbol:"Form ₹",
-                      price:14999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-shure-srh840-1160-1160-2_500x.jpg?v=1623753195",
-                      name:"AUSTERIAN AUDIO-HX-15",
-                      tag:"High Definition Audio",
-                      priceSymbol:"Form ₹",
-                      price:13999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-Sundara-1160-1160-2_500x.jpg?v=1592332661",
-                      name:"AUSTERIAN AUDIO-HX-25",
-                      tag:"Professional On-Ear Headphones",
-                      priceSymbol:"Form ₹",
-                      price:18999,
-                      strike:19999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/HiFiMAN-HE400SE-01_500x.jpg?v=1614231957",
-                      name:"AIAIAI TMA-2HD",
-                      tag:"High Definition Audio",
-                      priceSymbol:"Form ₹",
-                      price:13599,
-                      strike:15000,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Audio-technica-m20x-1160-1160-1_600x.jpg?v=1590482291",
-                      name:"AIAIAI TMA05",
-                      tag:"High Definition Audio",
-                      priceSymbol:"Form ₹",
-                      price:15599,
-                      strike:16699,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sennheiser-HD560S-01_500x.jpg?v=1606982042",
-                      name:"AKG-KPG",
-                      tag:"High Definition Audio",
-                      priceSymbol:"Form ₹",
-                      price:13999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-audio-technica-m40x-1160-1160-1_500x.jpg?v=1590564160",
-                      name:"V-MODA CROSSFADE",
-                      tag:"Wired DJ Headphones",
-                      priceSymbol:"Form ₹",
-                      price:13999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Audio-Technica-ATH-R70x-1160-1160-1_500x.jpg?v=1583303027",
-                      name:"AUSTERIAN AUDIO-HX001",
-                      tag:"Professional On-Ear Headphones",
-                      priceSymbol:"Form ₹",
-                      price:14999,
-                      strike:15999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-DT-880-Pro-1160-1160-1_500x.jpg?v=1599208178",
-                      name:"SENHEISER HD-5",
-                      tag:"Closed-back Studio Headphones",
-                      priceSymbol:"Form ₹",
-                      price:17899,
-                      strike:19999,},
-                      
-                      {image:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-V-MODA-M-200-1160-1160_300x.jpg?v=1588002899",
-                      name:"AUSTERIAN AUDIO-HX100",
-                      tag:"Wired DJ Headphones",
-                      priceSymbol:"Form ₹",
-                      price:13999,
-                      strike:14999,},]
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-DT-880-Pro-1160-1160-1_500x.jpg?v=1599208178",
+        name: "EVERYDYNAMIC-DT 880",
+        tag: "Open-Back studio",
+        priceSymbol: "Form ₹",
+        price: 18499,
+        strike: 24999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-569-headphone-zone-29093551111_500x.jpg?v=1579780219",
+        name: "EIKON-H200",
+        tag: "Wired DJ Headphones",
+        priceSymbol: "Form ₹",
+        price: 10999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-AIAIAI-Studio-XE-02_300x.jpg?v=1636776924",
+        name: "AIAIAI-TMA 2",
+        tag: "Wired DJ Headphones",
+        priceSymbol: "Form ₹",
+        price: 16549,
+        strike: 19999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_500x.jpg?v=1591944478",
+        name: "EIKON-H250",
+        tag: "Professional On-Ear Headphones",
+        priceSymbol: "Form ₹",
+        price: 14999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-shure-srh840-1160-1160-2_500x.jpg?v=1623753195",
+        name: "AUSTERIAN AUDIO-HX-15",
+        tag: "High Definition Audio",
+        priceSymbol: "Form ₹",
+        price: 13999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-Sundara-1160-1160-2_500x.jpg?v=1592332661",
+        name: "AUSTERIAN AUDIO-HX-25",
+        tag: "Professional On-Ear Headphones",
+        priceSymbol: "Form ₹",
+        price: 18999,
+        strike: 19999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/HiFiMAN-HE400SE-01_500x.jpg?v=1614231957",
+        name: "AIAIAI TMA-2HD",
+        tag: "High Definition Audio",
+        priceSymbol: "Form ₹",
+        price: 13599,
+        strike: 15000,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Audio-technica-m20x-1160-1160-1_600x.jpg?v=1590482291",
+        name: "AIAIAI TMA05",
+        tag: "High Definition Audio",
+        priceSymbol: "Form ₹",
+        price: 15599,
+        strike: 16699,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sennheiser-HD560S-01_500x.jpg?v=1606982042",
+        name: "AKG-KPG",
+        tag: "High Definition Audio",
+        priceSymbol: "Form ₹",
+        price: 13999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-audio-technica-m40x-1160-1160-1_500x.jpg?v=1590564160",
+        name: "V-MODA CROSSFADE",
+        tag: "Wired DJ Headphones",
+        priceSymbol: "Form ₹",
+        price: 13999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Audio-Technica-ATH-R70x-1160-1160-1_500x.jpg?v=1583303027",
+        name: "AUSTERIAN AUDIO-HX001",
+        tag: "Professional On-Ear Headphones",
+        priceSymbol: "Form ₹",
+        price: 14999,
+        strike: 15999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-DT-880-Pro-1160-1160-1_500x.jpg?v=1599208178",
+        name: "SENHEISER HD-5",
+        tag: "Closed-back Studio Headphones",
+        priceSymbol: "Form ₹",
+        price: 17899,
+        strike: 19999,
+    },
+
+    {
+        image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-V-MODA-M-200-1160-1160_300x.jpg?v=1588002899",
+        name: "AUSTERIAN AUDIO-HX100",
+        tag: "Wired DJ Headphones",
+        priceSymbol: "Form ₹",
+        price: 13999,
+        strike: 14999,
+    },]
 
 
     localStorage.setItem("headPhonesData", JSON.stringify("headphones"));
 
-var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 
-function displayData(headphones){
+    function displayData(headphones) {
 
-    document.querySelector("#container").innerHTML = "";
-    headphones.map(function(elem, index, array)
-{
-    var div = document.createElement("div");
+        document.querySelector("#container").innerHTML = "";
+        headphones.map(function (elem, index, array) {
+            var div = document.createElement("div");
 
-    var img = document.createElement("img");
-    img.setAttribute("src", elem.image);
+            var img = document.createElement("img");
+            img.setAttribute("src", elem.image);
+            img.setAttribute("class","image")
 
-    var name = document.createElement("p");
-    name.innerText = elem.name;
+            var name = document.createElement("p");
+            name.innerText = elem.name;
 
-    var tag = document.createElement("p");
-    tag.innerText = elem.tag;
+            var tag = document.createElement("p");
+            tag.innerText = elem.tag;
 
-    var priceDiv = document.createElement("div");
+            var priceDiv = document.createElement("div");
 
-    var price = document.createElement("p");
-    price.innerText = elem.price;
+            var price = document.createElement("p");
+            price.innerText = elem.price;
 
-    var symbol = document.createElement("p");
-    symbol.innerText = elem.priceSymbol;
+            var symbol = document.createElement("p");
+            symbol.innerText = elem.priceSymbol;
 
-    var strike = document.createElement("s");
-    strike.innerText = elem.strike;
+            var strike = document.createElement("s");
+            strike.innerText = elem.strike;
 
-    // add to cart button
+            // add to cart button
 
-    var cart = document.createElement("button");
-    cart.innerText = "Add To Cart";
-    cart.addEventListener("click", function()
-    {
-        addToCart(elem);
-    })
+            var cart = document.createElement("button");
+            cart.innerText = "Add To Cart";
+            cart.addEventListener("click", function () {
+                addToCart(elem);
+            })
 
-    priceDiv.append(symbol, price, strike);
-    priceDiv.setAttribute("class","priceDiv");
+            priceDiv.append(symbol, price, strike);
+            priceDiv.setAttribute("class", "priceDiv");
 
-    div.append(img, name, tag, priceDiv, cart);
-    document.querySelector("#container").append(div);
-})
-
-function addToCart(elem)
-{
-    console.log(elem);
-    elem.quant = 1;
-    cartArr.push(elem);
-    console.log(cartArr)
-    localStorage.setItem("cartItems", JSON.stringify(cartArr));
-}
-
-}
-
-displayData(headphones)
-
-function sortItems()
-{
-    var sorting = document.querySelector("#sorter").value;
-
-    if(sorting == "H2L")
-    {
-        headphones.sort(function(a, b){
-            return b.price -a.price;
+            div.append(img, name, tag, priceDiv, cart);
+            document.querySelector("#container").append(div);
         })
-        displayData(headphones);
-        
+
+        function addToCart(elem) {
+            console.log(elem);
+            elem.quant = 1;
+            cartArr.push(elem);
+            console.log(cartArr)
+            localStorage.setItem("cartItems", JSON.stringify(cartArr));
+        }
+
     }
-    else(sorting === "L2H")
-    {
-        headphones.sort(function(a, b)
+
+    displayData(headphones)
+
+    function sortItems() {
+        var sorting = document.querySelector("#sorter").value;
+
+        if (sorting == "H2L") {
+            headphones.sort(function (a, b) {
+                return b.price - a.price;
+            })
+            displayData(headphones);
+
+        }
+        else (sorting === "L2H")
         {
-            return a.price - b.price;
-        })
-        displayData(headphones);
+            headphones.sort(function (a, b) {
+                return a.price - b.price;
+            })
+            displayData(headphones);
+        }
     }
-}
 
-function search(){
-  var searchText = document.getElementById("search").value;
-  var filterData = headphones.filter(function(elem){
-    return elem.name.trim().toLowerCase().includes(searchText.toLowerCase());
-  })
-  displayData(filterData);
-}
+    function search() {
+        var searchText = document.getElementById("search").value;
+        var filterData = headphones.filter(function (elem) {
+            return elem.name.trim().toLowerCase().includes(searchText.toLowerCase());
+        })
+        displayData(filterData);
+    }
 
 </script>

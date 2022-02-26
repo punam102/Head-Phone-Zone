@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Carddetail</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #logo{
+            display: flex;
+            gap: 10px;
+            padding-left: 5px;
+            margin-left: 5px;
+        }
+        #first{
+            width: 300px;
+        }
+        .month, .year{
+            width: 30px;
+
+        }
+        #last{
+            display: flex;
+            gap: 10px;
+        }
+        #container{
+            width: 30%;
+            margin: auto;
+        }
+        #top{
+            margin-top: 10px;
+        }
+        .btn{
+     width: 130px;
+     height: 40px;
+     color: white;
+     background-color: blue;
+     border-radius: 3px;
+     border-color: transparent;
+     font-size: 15px;
+     font-weight: 550;
+    margin-left: 70px;
+    
+ }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Enter card details</h1> 
+    <div>
+     <h3>Card number</h3>
+     <input type="text" id="first">
+    </div>
+   
+    <div id="logo">
+        <div> <img src="https://cdn-icons-png.flaticon.com/512/349/349228.png" height="30px" width="30px" alt=""></div>
+        <div>
+         <img src="https://cdn-icons-png.flaticon.com/512/39/39196.png" height="30px" width="30px" alt="">
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/39/39119.png" height="30px" width="30px">
+        </div>
+        <div>
+         <img src="https://cdn-icons.flaticon.com/png/512/3757/premium/3757805.png?token=exp=1645883572~hmac=49b686068a1aa1f7aed85f87ddc6b76f" height="30px" width="30px">
+        </div>
+        <div>
+         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968341.png" height="30px" width="30px">
+        </div>
+        <div>
+         <img src="https://cdn-icons-png.flaticon.com/512/349/349230.png" height="30px" width="30px">
+        </div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/39/39022.png" height="30px" width="30px">
+     </div> 
+    </div>
+    <div>
+     <p>Accepted Credit and Debit card types</p>
+ </div>
+ <div>
+     <h3>Expiry Date</h3>
+    <p>For example.10/20</p>
+    <tr>
+        <td>Month</td>&nbsp
+        <td>Year</td>
+    </tr>
+    <br>
+    <tr>
+        <td><input type="number" class="month"></td> &nbsp &nbsp/ 
+        &nbsp &nbsp <td><input type="number" class="year"></td>
+    </tr>
+    </div>
+    <div>
+        <h3>Name on card</h3>
+        <input type="text" id="first">
+    </div>
+    <div>
+        <h3>Card security code</h3>
+        <p>The last 3 digits on the back of the card</p>
+        <div id="last">
+            <div><input type="text" id="top"></div>
+            <div><img src="https://as1.ftcdn.net/v2/jpg/01/31/56/86/1000_F_131568675_3ZITko0zV8M7gCnQmOX2WOJ5sUeIlSOf.jpg" height="50px" width="50px"></div>
+        </div>
+    </div>
+    <div>
+        <button onclick="go()" class="btn">Done</button>
+    </div>
+  </div>
+  <script>
+    function go(){
+        window.location.href="completed.html"
+    }
+</script>
+</body>
+</html>

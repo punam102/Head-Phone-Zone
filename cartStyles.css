@@ -142,6 +142,9 @@ img:focus{
   width:192px;
   height: 170px;
 }
+.total{
+    margin-top: 25px;
+}
 
     @media all and (min-width:381px) and  (max-width:700px){
         #container{
@@ -149,23 +152,19 @@ img:focus{
             grid-template-rows: repeat(2,1fr);
             margin:auto;
         }
-        #parent{
-            display: flex;
-            flex-direction: column;
+        .left{
+            display: grid;
+           grid-template-columns: repeat(2,1fr);
     
          height:auto;
             width:100%;
      
-          border: 1px solid red;
+         
             margin: auto;
         }
-        .left{
-
-      
-            width:100%;
-            border: 1px solid black;
+        
     
-        }
+        
         .right{
             border: 1px solid blue;
           

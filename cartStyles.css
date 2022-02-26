@@ -64,6 +64,67 @@
     font-size: 14px;
     border: 1px solid rgb(224, 219, 219);
 }
+/* 
+ .navbar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    
+    background-color:#f9f9f9; 
+    margin-top: -75px;
+   
+    
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+ 
+
+.left {
+    display: flex;
+    
+    gap: 6px;
+}
+
+.right {
+    display: flex;
+    margin-right: 35px;
+   
+    gap: 5px;
+}
+
+.head2{
+    padding: 14px 0px 0px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.head1{
+    text-decoration: none;
+    color:#4e4e4e;
+     
+}
+
+#head {
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 150px;
+    background-color:#f9f9f9;
+}
+
+#search {
+    width: 200px;
+    height: 26px;
+    margin-top: 25px;
+    font-size: 14px;
+    border: 1px solid rgb(224, 219, 219);
+} */
     #nav{
       
         justify-content: center;
@@ -96,6 +157,8 @@
         gap:20px;
       
         width:70%;
+    
+      
       
 
     }
@@ -109,18 +172,19 @@
         margin-left: 10%;
          
     }
-    table {
+    /* table {
         color:#444444B3;
-        border-collapse: collapse;
-        width: 70%;
-        margin: auto;
-    }
+border-collapse: collapse;
+width: 70%;
+margin: auto;
+    } */
 
   
     .right{
       
       background-color: #F5F5F5;
-        height:100%;
+ 
+       height:100%;
         width:25%;
     
          
@@ -261,6 +325,9 @@ i{
     margin-top: 80px;
     margin-left: 380px;
 }
+.total{
+    margin-top: 25px;
+}
 
     @media all and (min-width:381px) and  (max-width:700px){
         #container{
@@ -268,23 +335,19 @@ i{
             grid-template-rows: repeat(2,1fr);
             margin:auto;
         }
-        #parent{
-            display: flex;
-            flex-direction: column;
+        .left{
+            display: grid;
+           grid-template-columns: repeat(2,1fr);
     
          height:auto;
             width:100%;
      
-          border: 1px solid red;
+         
             margin: auto;
         }
-        .left{
-
-      
-            width:100%;
-            border: 1px solid black;
+        
     
-        }
+        
         .right{
             border: 1px solid blue;
           

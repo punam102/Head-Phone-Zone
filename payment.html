@@ -7,6 +7,9 @@
     <script src="https://kit.fontawesome.com/01d54b8bb8.js" crossorigin="anonymous"></script>    
     <title>$Payment Page</title>
     <style>
+  #all{
+     font-family: Arial, Helvetica, sans-serif;
+   }
  #ab{
     display: flex;
      margin: auto;
@@ -38,12 +41,15 @@
 }
 #ad{
     margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 #Qw{
      display: flex;
        margin-top: 10px;
        margin-bottom:10px;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 #cont{
@@ -51,6 +57,7 @@
     padding-left: 50px;
     text-align: center;
     text-decoration: rgb(33, 36, 36);
+    font-family: Arial, Helvetica, sans-serif;
 }
 #aj{
  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -59,12 +66,14 @@
   padding: 5px;
   width: 50%;
   margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #ae{
-
+    font-family: Arial, Helvetica, sans-serif;
     margin: auto;
 }  
 #left{
+font-family: Arial, Helvetica, sans-serif;
  text-align: center;
  margin-top: 30px;
 } 
@@ -78,6 +87,7 @@
     display: flex; 
     padding-left:450px;
     margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #opp{
     color: rgb(52, 52, 223);
@@ -85,23 +95,7 @@
     height: 50px;
     margin: auto;
     margin-top: 10px;
-}
-.button{
-    background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-   
-}
-.button{
-    background-color: blue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #tr{
     line-break: 100px;
@@ -109,16 +103,29 @@
 }
 #flex{
  display: flex;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
  #pay{
      font-size: 1cm;
-     font-family: fantasy;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
      color: black;
+
+ }
+ .btn{
+     width: 130px;
+     height: 40px;
+     color: white;
+     background-color: blue;
+     border-radius: 3px;
+     border-color: transparent;
+     font-size: 15px;
+     font-weight: 550;
  }
     </style>
 
 </head>
 <body>
+   <div id="all">
     <div style="padding-left: 550px;">
         <img src="https://cdn.shopify.com/s/files/1/0153/8863/files/LOGO_b858cb3f-4fc8-4b60-9a75-e863e311bcc4.png?114864"   alt="">
         
@@ -126,18 +133,15 @@
     <hr>
        <div id="pay">
            <p style="text-align: center;">Payment</p>
-            </div>
-           
-           
-       
+       </div>
        <div id="pj">
         <div id="Qw">
             <input type="radio">Razorpay (EMI, Bajaj Finserv, Cards, UPI, NetBanking, Wallets)
            <div style="padding-left: 40px;">
             <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" height="30px" width="30px" alt="">
             <img src="https://t3.ftcdn.net/jpg/00/15/55/26/240_F_15552699_xUvM48f4Furjlq3RNuQaUBIbTRePKU48.jpg" height="30px" width="30px" alt="">
-            <img src="https://cdn-icons.flaticon.com/png/128/3080/premium/3080729.png?token=exp=1645771517~hmac=f538a795be2c91527c2d19bc59b2b011" height="30px" width="30px" alt="">
-            <img src="https://cdn-icons.flaticon.com/png/128/5790/premium/5790705.png?token=exp=1645771517~hmac=749805785b2b0040d19eea33218f9ded" height="30px" width="30px" alt="">
+   
+            <img src="https://cdn-icons-png.flaticon.com/512/39/39013.png" height="30px" width="30px" alt="">
         </div>
        </div>
         
@@ -163,7 +167,7 @@
         </div>
         
         <hr>
-        <div>
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
             <input type="radio">	
             Pay on Delivery (Pay online through SMS Pay Link) - Cash on Delivery Available
         </div>
@@ -184,7 +188,7 @@
         </p>
        </div>
         </div>
-       <div id="aj">
+       <div id="aj" >
            <input type="radio">
            Same as shipping address
            <hr>
@@ -193,8 +197,9 @@
        </div>
        <div id="left">
              <p>Return to customer information</p>
-        <div >
-            <button class="button button2">Complete order</button>
+        <div id="button" >
+           
+            <button onclick="go()" class="btn">Complete order</button>
         </div>
        </div>
        <div id="ch">
@@ -215,5 +220,12 @@
           </div>
        </div>
        
+   </div>
+<script>
+    function go(){
+        window.location.href="completed.html"
+    }
+</script>
+    
 </body>
 </html>

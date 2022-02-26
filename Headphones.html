@@ -176,6 +176,9 @@
         hr {
             margin-top: 25px;
         }
+        .image:hover{
+            transform: scale(1.05);
+        }
 
         #container2{
     width: 100%;
@@ -498,6 +501,7 @@ i{
 
             var img = document.createElement("img");
             img.setAttribute("src", elem.image);
+            img.setAttribute("class","image")
 
             var name = document.createElement("p");
             name.innerText = elem.name;

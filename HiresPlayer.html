@@ -72,8 +72,8 @@
         </div>
         <div class="right">
             <input onkeyup="search()" id="search" placeholder="Search">
-            <p><a href="">Account</a></p>
-            <p><a href="">Cart</a></p>  
+            <p><a href="index.html">Account</a></p>
+            <p><a href="cart.html">Cart</a></p>  
         </div>
     </div>
     <h1>HI-RES PLAYERS</h1>
@@ -196,7 +196,11 @@ localStorage.setItem("playersData", JSON.stringify("players"));
 
 var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-players.map(function(elem, index, array)
+
+function displayData(players){
+
+    document.querySelector("#container").innerHTML = "";
+    players.map(function(elem, index, array)
 {
     var div = document.createElement("div");
 
@@ -244,6 +248,8 @@ function addToCart(elem)
     console.log(cartArr)
     localStorage.setItem("cartItems", JSON.stringify(cartArr));
 }
+}
+
 displayData(players)
 
 function sortItems()

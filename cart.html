@@ -17,11 +17,7 @@
 
     <div id="parent">
     <div class="left">
-        
-         
-         
-      
-
+    
       
     </div>
     <div class="right">
@@ -94,7 +90,6 @@
   
     var cartArr = JSON.parse(localStorage.getItem("cartItems")) ;
     console.log(cartArr)
-    displayData(cartArr)
 
     function displayData(cartArr)
     
@@ -160,21 +155,21 @@
     }
 
     
-   
+    displayData(cartArr)
     Total();
 
     function increaseQuant(index)
     {
         cartArr[index].quant++;
         localStorage.setItem("cartItems", JSON.stringify(cartArr));
-       
+        displayData(cartArr)
         Total();
     }
     function decreaseQuant(index)
     {
         cartArr[index].quant--;
         localStorage.setItem("cartItems", JSON.stringify(cartArr));
-
+        displayData(cartArr)
         Total();
     }
 </script>

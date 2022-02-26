@@ -72,8 +72,8 @@
         </div>
         <div class="right">
             <input onkeyup="search()" id="search" placeholder="Search">
-            <p><a href="">Account</a></p>
-            <p><a href="">Cart</a></p>  
+            <p><a href="index.html">Account</a></p>
+            <p><a href="cart.html">Cart</a></p>  
         </div>
     </div>
     <h1>DESKTOP AMPS & DACS</h1>
@@ -196,7 +196,10 @@
 
 var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-desktop.map(function(elem, index, array)
+function displayData(desktop){
+
+    document.querySelector("#container").innerHTML = "";
+    desktop.map(function(elem, index, array)
 {
     var div = document.createElement("div");
 
@@ -244,6 +247,10 @@ function addToCart(elem)
     console.log(cartArr)
     localStorage.setItem("cartItems", JSON.stringify(cartArr));
 }
+}
+
+
+
 displayData(desktop)
 
 function sortItems()

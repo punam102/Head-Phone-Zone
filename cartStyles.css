@@ -21,6 +21,7 @@
     }
     .inner{
         display: flex;
+        justify-content: space-between; 
     
        
         width:80%;
@@ -109,13 +110,15 @@ margin: auto;
         margin-top:20px;
        
     }
-    .priceDiv {display: flex;align-items: baseline;gap: 10px;}
+    .priceDiv {display: flex;
+        flex-direction:column; gap: 10px;
+    margin:auto}
 
     img {width:50%;}
 
-    s {color: red;font-size: 14px;}
+  
 
-    p {font-size: 14px;vertical-align: middle;letter-spacing: 1px;position: relative;}
+    p {font-size: 14px;letter-spacing: 1px;position: relative;}
 
     #total {display: flex; border: 1px solid; width:250px;margin-left: 200px;padding-left: 20px;margin-top: 30px;align-items: center;gap: 10px;}
 
@@ -134,7 +137,11 @@ margin: auto;
         width:100%;
 
     } */
-
+img:hover,
+img:focus{
+  width:192px;
+  height: 170px;
+}
 
     @media all and (min-width:381px) and  (max-width:700px){
         #container{

@@ -149,23 +149,19 @@ img:focus{
             grid-template-rows: repeat(2,1fr);
             margin:auto;
         }
-        #parent{
-            display: flex;
-            flex-direction: column;
+        .left{
+            display: grid;
+           grid-template-columns: repeat(2,1fr);
     
          height:auto;
             width:100%;
      
-          border: 1px solid red;
+         
             margin: auto;
         }
-        .left{
-
-      
-            width:100%;
-            border: 1px solid black;
+        
     
-        }
+        
         .right{
             border: 1px solid blue;
           

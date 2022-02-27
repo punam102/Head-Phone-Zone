@@ -18,6 +18,13 @@
     
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
+.image:hover{
+    transform: scale(1.05);
+}
+#sorter{
+    height: 30px;
+    width: 250px;
+}
 
 
 .left {
@@ -78,14 +85,14 @@ border-bottom: 2px solid #808080;
 }
 
 #container>div {
-    line-height: 0px;
+    line-height: 6px;
     text-align: center;
 }
 
 .priceDiv {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 img {
@@ -171,8 +178,8 @@ hr {
     height: 280px;
     display: flex;
     justify-content: center;
-    background-color: #F9F9F9;
-    margin-top: 20px;
+    background-color: #f1f0f0;
+    margin-top: 50px;
     
     
 }
@@ -225,7 +232,7 @@ i{
 }
 
 .box19{
-    background-color: #F9F9F9;
+    background-color: #f1f0f0;
  
 }
 

@@ -449,4 +449,16 @@ i{
     margin-top: 80px;
     margin-left: 380px;
 }
+.stylebutton{
+    width: 120px;
+    height: 45px;
+    border-radius:50px ;
+    border: 0px solid ;
+    background-color:rgb(60, 7, 255);
+    color: white;
+    margin-left: 600px;
+    margin-bottom: 80px;
+    font-weight: bolder;
+    font-size: 15px;
+}
  

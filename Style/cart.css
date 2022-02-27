@@ -328,6 +328,9 @@ i{
 .total{
     margin-top: 25px;
 }
+.image:hover{
+    transform: scale(1.05);
+}
 
     @media all and (min-width:381px) and  (max-width:700px){
         #container{

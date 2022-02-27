@@ -2,7 +2,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-iFi-Audio-Balanced-Cable-01_500x.jpg?v=1623498956",
     name: "HIFIMAN-SUNDARA",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 37999,
     strike: 39999,
 },
@@ -11,7 +11,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Hifiman-sundara-topping-l30-e30-1160-1160-1_500x.jpg?v=1615013790",
     name: "HIFIMAN-SUNDARA E30",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 29999,
     strike: 35999,
 },
@@ -20,7 +20,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/M50x-hp-dac-2_500x.jpg?v=1614934130",
     name: "AUDIO-TECHNICA-ATHM50",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 53999,
     strike: 55999,
 },
@@ -29,7 +29,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/2_7ac5b350-0b79-4754-ac28-89c4c4a1f09e_500x.jpg?v=1623492208",
     name: "AUDIO-TECHNICA ZEN",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 45999,
 },
@@ -38,7 +38,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sundara-TR-AMP-1160-1160-5_500x.jpg?v=1615182781",
     name: "HIFIMAN-SUNDARA TR-AMP",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 9999,
     strike: 11999,
 },
@@ -47,7 +47,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Beyerdynamic-TOPPING-02_500x.jpg?v=1614939958",
     name: "BEYERDYNAMIC-DT 770",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 3999,
     strike: 4999,
 },
@@ -56,7 +56,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-beyerdynamic-Topping-05_500x.jpg?v=1615201000",
     name: "BEYERDYNAMIC-DT 990",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 89999,
     strike: 99999,
 },
@@ -65,7 +65,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/2_923ca1f2-565b-47c9-8ae1-e6ee4fa6aa10_500x.jpg?v=1614937759",
     name: "BEYERDYNAMIC-DT 770 PRO",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 45999,
 },
@@ -74,7 +74,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Beyerdynamic-Aune-Bundle-05_500x.jpg?v=1614938588",
     name: "BEYERDYNAMIC-DT 990 PRO",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 43999,
 },
@@ -83,7 +83,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-990-X1s-02_500x.jpg?v=1615361260",
     name: "HIFIMAN-H400SE",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 45999,
 },
@@ -92,7 +92,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/HPZ-03_500x.jpg?v=1623494412",
     name: "HIFIMAN HE400",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 41999,
 },
@@ -101,7 +101,7 @@ var bundle = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/HPZ-02_617c87e8-6c80-4778-b784-a1e9cd24652d_500x.jpg?v=1615378022",
     name: "MEZE-99 CLASSIC",
     tag: "Portable Bundle",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 36999,
     strike: 38999,
 },];
@@ -118,6 +118,7 @@ function displayData(bundle) {
 
         var img = document.createElement("img");
         img.setAttribute("src", elem.image);
+        img.setAttribute("class","image")
 
         var name = document.createElement("p");
         name.innerText = elem.name;
@@ -128,11 +129,10 @@ function displayData(bundle) {
         var priceDiv = document.createElement("div");
 
         var price = document.createElement("p");
-        price.innerText = elem.price;
+        price.innerText = "₹ "+ elem.price;
 
 
-        var symbol = document.createElement("p");
-        symbol.innerText = elem.priceSymbol;
+ 
 
         var strike = document.createElement("s");
         strike.innerText = elem.strike;
@@ -145,7 +145,7 @@ function displayData(bundle) {
             addToCart(elem);
         })
 
-        priceDiv.append(symbol, price, strike);
+        priceDiv.append(price, strike);
         priceDiv.setAttribute("class", "priceDiv");
 
         div.append(img, name, tag, priceDiv, cart);
@@ -173,7 +173,7 @@ function sortItems() {
         displayData(bundle);
 
     }
-    else (sorting === "L2H")
+    else if(sorting === "L2H")
     {
         bundle.sort(function (a, b) {
             return a.price - b.price;

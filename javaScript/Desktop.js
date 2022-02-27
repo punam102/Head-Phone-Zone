@@ -4,7 +4,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-E30-01_500x.jpg?v=1596625475",
     name: "TOPPING-A30 PRO",
     tag: "Desktop Headphone Amp & DAC",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 12999,
     strike: 15999,
 },
@@ -13,7 +13,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/iFi-Audio-Zen-can-05_500x.jpg?v=1597035161",
     name: "AUNE AUDIO-X1S PRO",
     tag: "Desktop Digital to Analog Converter (DAC)",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 39999,
     strike: 45999,
 },
@@ -22,7 +22,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-iFi-Audio-Zen-DAC-V2-2_500x.jpg?v=1626759314",
     name: "FIIO-K5 PRO",
     tag: "Desktop Digital to Analog Converter (DAC)",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 12999,
     strike: 15999,
 },
@@ -31,7 +31,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/topping-L30-Black-01_500x.jpg?v=1606724717",
     name: "EARMAN DONALD DAC",
     tag: "Desktop Headphone Amplifier",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 17999,
     strike: 18999,
 },
@@ -40,7 +40,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-D50s-06_500x.jpg?v=1596697897",
     name: "TOPPING-A50S",
     tag: "Desktop DAC & Amp",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 12599,
     strike: 14999,
 },
@@ -49,7 +49,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Topping-A90-01_500x.jpg?v=1611990200",
     name: "TOPPING D30 PRO",
     tag: "Desktop DAC & Amp",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 12999,
     strike: 13999,
 },
@@ -58,7 +58,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Aune-Audio-X7s-2021-02_500x.jpg?v=1616407921",
     name: "CHORD-MOJO 2",
     tag: "Desktop DAC & Amp",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 15999,
     strike: 15999,
 },
@@ -67,7 +67,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-FiiO-D03K-2_500x.jpg?v=1621494468",
     name: "AUNE AUDIO-X8",
     tag: "Desktop Headphone Amplifier",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 11999,
     strike: 15999,
 },
@@ -76,7 +76,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/EarMen-Donald-DAC-New-2_300x.jpg?v=1595424126",
     name: "TOPPING-DX3 PRO+",
     tag: "Desktop Digital To Analog Converter (DAC)",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 18999,
     strike: 19999,
 },
@@ -85,7 +85,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-K5-Pro-1_300x.jpg?v=1624598956",
     name: "S.M.S.L SU-9",
     tag: "Desktop DAC & Amp",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 12999,
     strike: 15999,
 },
@@ -94,7 +94,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Aune-Audio-X1s-1160-1160-1_300x.jpg?v=1597038298",
     name: "XDUOO MT-604",
     tag: "Desktop Digital To Analog Converter (DAC)",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 15999,
     strike: 16999,
 },
@@ -103,7 +103,7 @@ var desktop = [{
     image: "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Topping-A30Pro-gallery-5_300x.jpg?v=1620033119",
     name: "TOPPING-D10",
     tag: "Desktop Headphone Amplifier",
-    priceSymbol: "Form ₹",
+    priceSymbol: "₹",
     price: 11999,
     strike: 15999,
 },];
@@ -120,6 +120,7 @@ function displayData(desktop) {
 
         var img = document.createElement("img");
         img.setAttribute("src", elem.image);
+        img.setAttribute("class","image")
 
         var name = document.createElement("p");
         name.innerText = elem.name;
@@ -130,10 +131,9 @@ function displayData(desktop) {
         var priceDiv = document.createElement("div");
 
         var price = document.createElement("p");
-        price.innerText = elem.price;
+        price.innerText = "₹ "+ elem.price;
 
-        var symbol = document.createElement("p");
-        symbol.innerText = elem.priceSymbol;
+        
 
         var strike = document.createElement("s");
         strike.innerText = elem.strike;
@@ -146,7 +146,7 @@ function displayData(desktop) {
             addToCart(elem);
         })
 
-        priceDiv.append(symbol, price, strike);
+        priceDiv.append(price, strike);
         priceDiv.setAttribute("class", "priceDiv");
 
         div.append(img, name, tag, priceDiv, cart);
@@ -176,7 +176,7 @@ function sortItems() {
         displayData(desktop);
 
     }
-    else (sorting === "L2H")
+    else if(sorting === "L2H")
     {
         desktop.sort(function (a, b) {
             return a.price - b.price;

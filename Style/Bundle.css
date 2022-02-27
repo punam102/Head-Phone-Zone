@@ -78,14 +78,16 @@
 }
 
 #container>div {
-    line-height: 0px;
+    line-height: 6px;
     text-align: center;
 }
 
 .priceDiv {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-evenly;
+     
+     
 }
 
 img {
@@ -169,7 +171,8 @@ width: 100%;
 height: 280px;
 display: flex;
 justify-content: center;
-background-color: #F9F9F9;
+background-color:#f1f0f0;
+margin-top: 50px;
 
 
 }
@@ -222,7 +225,7 @@ color: white;
 }
 
 .box19{
-background-color: #F9F9F9;
+background-color: #f1f0f0;
 }
 
 .box20{
@@ -231,5 +234,12 @@ background-color: #F9F9F9;
  margin-left: 400px;
  margin-top: 80px;
 
+}
+.image:hover{
+    transform: scale(1.05);
+}
+#sorter{
+    height: 30px;
+    width: 250px;
 }
 

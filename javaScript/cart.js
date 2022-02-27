@@ -14,6 +14,7 @@ function displayData(cartArr) {
 
         var img = document.createElement("img");
         img.setAttribute("src", elem.image);
+        img.setAttribute("class","image")
 
         var name = document.createElement("p");
         name.innerText = elem.name;
@@ -85,7 +86,7 @@ function decreaseQuant(index) {
 }
 function deleteItem(index){
     cartArr.splice(index,1)
-localStorage.setItem("cartItems", JSON.stringify(cartArr))
-displayData(cartArr)
-
+    localStorage.setItem("cartItems", JSON.stringify(cartArr))
+    displayData(cartArr)
+    Total();
 }

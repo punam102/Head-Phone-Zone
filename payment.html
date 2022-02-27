@@ -112,7 +112,7 @@ font-family: Arial, Helvetica, sans-serif;
 
  }
  .btn{
-     width: 130px;
+     width: 190px;
      height: 40px;
      color: white;
      background-color: blue;
@@ -126,9 +126,8 @@ font-family: Arial, Helvetica, sans-serif;
 </head>
 <body>
    <div id="all">
-    <div style="margin-left: 600px;">
-        <a href="./index.html"><img style="height: 50px; width: 200px;"
-            src="https://cdn.shopify.com/s/files/1/0153/8863/files/Headphone-Zone-Animated-Header_400x_b56ee274-b480-4d0f-91ae-4a16d148a93f.gif?v=1580537719"></a>
+    <div style="padding-left: 550px;">
+        <img src="https://cdn.shopify.com/s/files/1/0153/8863/files/LOGO_b858cb3f-4fc8-4b60-9a75-e863e311bcc4.png?114864"   alt="">
         
     </div>
     <hr>
@@ -137,14 +136,10 @@ font-family: Arial, Helvetica, sans-serif;
        </div>
        <div id="pj">
         <div id="Qw">
-            <input type="radio">Razorpay (EMI, Bajaj Finserv, Cards, UPI, NetBanking, Wallets)
-           <div style="padding-left: 40px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" height="30px" width="30px" alt="">
-            <img src="https://t3.ftcdn.net/jpg/00/15/55/26/240_F_15552699_xUvM48f4Furjlq3RNuQaUBIbTRePKU48.jpg" height="30px" width="30px" alt="">
-   
-            <img src="https://cdn-icons-png.flaticon.com/512/39/39013.png" height="30px" width="30px" alt="">
+                <form>
+                    <input type="radio" id="html" name="lang" >
+                    <label for="html">	Razorpay (EMI, Bajaj Finserv, Cards, UPI, NetBanking, Wallets)</label><br>
         </div>
-       </div>
         
         <hr>
         <div id="ad">
@@ -155,27 +150,32 @@ font-family: Arial, Helvetica, sans-serif;
                 <p>After clicking “Complete order”, you will be redirected to Razorpay (Cards, UPI, NetBanking, Wallets, Paypal) to complete your purchase securely.</p>
             </div>
         </div>
-        
         <hr>
         <div id="flex">
-            <input type="radio"> Cards,NetBanking,Wallets,UPI,Paypal
-            <div style="padding-left: 200px;">
-                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" height="30px" width="30px" alt="">
-                   <img src="https://cdn-icons-png.flaticon.com/512/825/825464.png" height="30px" width="30px" alt="">
-                  <img src="https://cdn-icons-png.flaticon.com/512/196/196556.png" height="30px" width="30px" alt="">
-        
-            </div>
+            
+                <input type="radio" id="tml" name="lang" >
+                <label for="tml"> Cards,NetBanking,Wallets,UPI,Paypal</label><br>
+    
+                <div style="padding-left: 200px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" height="30px" width="30px" alt="">
+                       <img src="https://cdn-icons-png.flaticon.com/512/825/825464.png" height="30px" width="30px" alt="">
+                      <img src="https://cdn-icons-png.flaticon.com/512/196/196556.png" height="30px" width="30px" alt="">
+                </div>
+            
         </div>
-        
         <hr>
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            <input type="radio">	
-            Pay on Delivery (Pay online through SMS Pay Link) - Cash on Delivery Available
+           
+            <input type="radio" id="css" name="lang" >
+            <label for="css">Pay on Delivery (Pay online through SMS Pay Link) - Cash on Delivery Available</label> <br>
+           
         </div>
         <hr>
         <div id="Qw">
-            <input type="radio">
-            Simpl Pay-In-3
+         
+            <input type="radio" id="htm" name="lang" >
+            <label for="htm"> Simpl Pay-In-3</label><br>
+         </form>
            <div style="padding-left: 400px;">
                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" height="30px" width="30px" alt="">
                <img src="https://cdn-icons-png.flaticon.com/512/825/825464.png" height="30px" width="30px" alt="">
@@ -190,17 +190,20 @@ font-family: Arial, Helvetica, sans-serif;
        </div>
         </div>
        <div id="aj" >
-           <input type="radio">
-           Same as shipping address
-           <hr>
-           <input type="radio">
-           Use a different billing address
+                <form>
+                    <input type="radio" id="abc" name="lang1" >
+                    <label for="abc"> Same as shipping address</label><br>
+                    <hr>
+                    <input type="radio" id="cde" name="lang1" >
+                    <label for="cde">Use a different billing address</label><br>
+                </form>
+           
        </div>
        <div id="left">
              <p>Return to customer information</p>
         <div id="button" >
            
-            <button onclick="go()" class="btn">Complete order</button>
+            <button onclick="go()" class="btn">Proceed to payment</button>
         </div>
        </div>
        <div id="ch">
@@ -224,9 +227,8 @@ font-family: Arial, Helvetica, sans-serif;
    </div>
 <script>
     function go(){
-        window.location.href="completed.html"
+        window.location.href="carddetail.html"
     }
 </script>
-    
 </body>
 </html>
